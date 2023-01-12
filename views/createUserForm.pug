@@ -1,4 +1,4 @@
-extends layount
+extends layout
 
 block content
     form(action='/add' method='post')
@@ -9,7 +9,7 @@ block content
         input(id='lastname' name='lastname' type='text')
 
         label(for='jobtitle') Job Title
-        input(id='jobtitle' name='jobtitle' type='text')
+        select(id='jobtitle' name='jobtitle')
             each title in jobtitles
                 option(value=title) #{title}
 
